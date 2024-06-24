@@ -1,0 +1,107 @@
+:root {
+    --primary-color: #ED1459;
+    --secondary-color: #2E2D2D;
+    --tertiary-color: #161616;
+    --light-gray: #828282;
+    --hover: #262525;
+    --white: #FFFFFF;
+    --black: #000000;
+    --font-family: 'Inter', sans-serif;
+}
+
+body {
+    font-family: var(--font-family);
+    color: var(--white);
+    background-color: var(--secondary-color);
+}
+
+.header {
+    background-color: var(--black);
+    color: var(--primary-color);
+}
+
+.titulo {
+    display: flex;
+    justify-content: center;
+    gap: 5em;
+}
+
+/* Estilos para o menu */
+.menu-icon {
+    width: 25px;
+}
+
+/* Estilos para a barra de pesquisa */
+input[type="text"] {
+    font-size: 0.9rem;
+    color: var(--white);
+    border-radius: 15px; 
+    border: 1px solid var(--black); 
+}
+
+/* Estilos para as colunas */
+.col-4 {
+    font-size: 0.9rem;
+}
+
+.col-4:first-child {
+    text-align: center;
+}
+
+/* Estilos para as células da tabela */
+th, td {
+    text-align: center;
+}
+
+/* Estilos para as células da tabela */
+th {
+    color: var(--black);
+    text-align: center;
+}
+
+
+/* Estilos para a tabela */
+.table tbody tr:nth-child(n + 1) { 
+    background-color: var(--tertiary-color);
+    color: var(--white);
+}
+
+/* Hover para linhas da tabela */
+.table tbody tr:hover {
+    background-color: var(--hover);
+    transition: background-color 0.3s ease;
+    color: var(--white);
+}
+
+/* Estilos para o botão */
+.btn-primary {
+    color: var(--white);
+}
+
+/* Estilos para o botão fixo */
+.add-service-button {
+    position: fixed; 
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%; 
+    max-width: 300px;
+  }
+
+/* Ajustes para telas menores */
+@media (max-width: 576px) {
+    .col-4 {
+        font-size: 0.8rem;
+    }
+    .header .row {
+        flex-direction: column;
+    }
+    .header .col-6 {
+        text-align: center;
+    }
+    .titulo {
+        display: flex;
+        justify-content: center;
+        gap: 0.5em;
+    }
+}
